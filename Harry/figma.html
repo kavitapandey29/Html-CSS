@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .top-bar-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+}
+.iconothernotifications {
+  position: absolute;
+  top: 18px;
+  right: 36px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.search-for-a {
+  position: absolute;
+  top: 1px;
+  left: 32px;
+  letter-spacing: 0.01em;
+}
+.iconothersearch,
+.search {
+  position: absolute;
+  height: 20px;
+}
+.iconothersearch {
+  top: 0;
+  left: 0;
+  width: 20px;
+  overflow: hidden;
+}
+.search {
+  top: 20px;
+  left: 36px;
+  width: 158px;
+}
+.searchsearch-bar {
+  position: absolute;
+  width: calc(100% - 256px);
+  top: 0;
+  right: 0;
+  left: 256px;
+  height: 60px;
+  font-size: var(--regular-12-size);
+  color: var(--secondary-gray);
+}
+.side-nav-bg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+  box-shadow: var(--sidebar-shadow);
+  width: 256px;
+}
+.rectangle,
+.textmedium-11-gray {
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  width: 146px;
+  height: 17px;
+}
+.rectangle {
+  left: 0;
+  border-radius: 2px;
+  background-color: #c4c4c4;
+  width: 14px;
+  height: 14px;
+}
+.subtract-child {
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+  border-radius: 1px;
+  background-color: var(--color-white);
+  width: 2px;
+  height: 10px;
+}
+.subtract {
+  position: relative;
+  background-color: #c2cfe0;
+  width: 14px;
+  height: 14px;
+}
+.iconmenutoggle {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.toggle-sidebar {
+  position: absolute;
+  bottom: 22px;
+  left: 27px;
+  width: 174px;
+  height: 17px;
+  font-size: var(--medium-11-size);
+  color: var(--secondary-gray);
+}
+.deals,
+.settings,
+.textmedium-13-darkblue {
+  position: absolute;
+  top: 0;
+  left: 34px;
+  width: 174px;
+  height: 20px;
+}
+.deals,
+.settings {
+  top: 440px;
+  left: 24px;
+  width: 208px;
+}
+.deals {
+  top: 371px;
+}
+.chat {
+  top: 331px;
+}
+.chat,
+.contacts1,
+.dashboard,
+.email,
+.saas-kit,
+.tasks {
+  position: absolute;
+  left: 24px;
+  width: 208px;
+  height: 20px;
+}
+.contacts1 {
+  top: 291px;
+  color: var(--main-accent-blue);
+}
+.dashboard,
+.email,
+.saas-kit,
+.tasks {
+  top: 251px;
+}
+.dashboard,
+.saas-kit,
+.tasks {
+  top: 211px;
+}
+.dashboard,
+.saas-kit {
+  top: 171px;
+}
+.saas-kit {
+  margin: 0;
+  top: 17px;
+  font-size: var(--semibold-18-size);
+  font-weight: 600;
+  font-family: var(--semibold-18);
+  color: var(--main-accent-blue);
+  display: inline-block;
+  width: 69px;
+  height: 26px;
+}
+.avatarprofile-photo-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+}
+.sierra-ferguson {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  display: inline-block;
+}
+.textmedium-14-black {
+  position: absolute;
+  top: 3px;
+  left: 62px;
+  width: 146px;
+  height: 21px;
+}
+.sfergusongmailcom {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  display: inline-block;
+}
+.profile,
+.textmedium-11-gray1 {
+  position: absolute;
+  top: 26px;
+  left: 62px;
+  width: 146px;
+  height: 17px;
+  font-size: var(--medium-11-size);
+  color: var(--secondary-gray);
+}
+.profile {
+  top: 85px;
+  left: 24px;
+  width: 208px;
+  height: 46px;
+  font-size: var(--medium-14-size);
+  color: var(--secondary-black);
+}
+.side-nav-devider {
+  position: absolute;
+  top: 415px;
+  left: 0;
+  background-color: var(--divider);
+  width: 256px;
+  height: 1px;
+}
+.accent-btn-child,
+.side-barcontacts {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.side-barcontacts {
+  width: 256px;
+  color: var(--secondary-dark-blue);
+}
+.accent-btn-child {
+  width: 100%;
+  right: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--main-accent-blue);
+  box-shadow: var(--accent-button-shadow);
+}
+.add-contact {
+  position: absolute;
+  width: 82.5%;
+  top: 26.19%;
+  left: 8.75%;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  display: inline-block;
+}
+.accent-btn {
+  position: absolute;
+  top: 96px;
+  right: 38px;
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  color: var(--color-white);
+}
+.all {
+  color: var(--main-accent-blue);
+}
+.company-all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.01em;
+}
+.polygon-icon {
+  position: absolute;
+  top: 8px;
+  left: 86.5px;
+  width: 6.1px;
+  height: 3px;
+}
+.email-type,
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 93px;
+  height: 18px;
+}
+.filter {
+  top: 120px;
+  left: 292px;
+  font-size: var(--regular-12-size);
+}
+.tasks-table-child,
+.unchecked {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.tasks-table-child {
+  top: 632px;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.unchecked {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--br-9xs);
+  border: 2px solid var(--checkbox-empty);
+  box-sizing: border-box;
+}
+.boxunchecked {
+  position: absolute;
+  top: 656px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-item {
+  position: absolute;
+  width: 100%;
+  top: 568px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.boxunchecked1 {
+  position: absolute;
+  top: 592px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.rectangle-icon,
+.tasks-table-inner {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.tasks-table-inner {
+  top: 632px;
+  background-color: var(--divider);
+  height: 1px;
+}
+.rectangle-icon {
+  top: 49px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 64px;
+}
+.boxunchecked2 {
+  position: absolute;
+  top: 73px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.textmedium-15-tableblack {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  width: 226px;
+  height: 23px;
+  font-size: var(--medium-15-size);
+  color: var(--secondary-table-black);
+}
+.hatchbuck {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.01em;
+  display: inline-block;
+}
+.textregular-13-tablegray,
+.textregular-13-tablegray1 {
+  position: absolute;
+  top: 71px;
+  left: calc(50% + 29px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray1 {
+  left: calc(50% + 173px);
+}
+.textregular-13-tablegray2,
+.textregular-13-tablegray3 {
+  position: absolute;
+  top: 71px;
+  left: calc(50% + 317px);
+  width: 60px;
+  height: 20px;
+}
+.textregular-13-tablegray3 {
+  left: calc(50% - 205px);
+  width: 210px;
+}
+.rectangle-div {
+  position: absolute;
+  width: 100%;
+  top: 114px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.boxunchecked3 {
+  position: absolute;
+  top: 138px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child1 {
+  position: absolute;
+  width: 100%;
+  top: 179px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.boxunchecked4 {
+  position: absolute;
+  top: 203px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child2 {
+  position: absolute;
+  width: 100%;
+  top: 244px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.table-secondary-text-2 {
+  position: absolute;
+  top: 201px;
+  right: 24px;
+  width: 130px;
+  height: 20px;
+  text-align: right;
+}
+.table-secondary-text-21,
+.table-secondary-text-22,
+.table-secondary-text-23 {
+  position: absolute;
+  top: 266px;
+  right: 24px;
+  width: 130px;
+  height: 20px;
+  text-align: right;
+}
+.table-secondary-text-22,
+.table-secondary-text-23 {
+  top: 71px;
+}
+.table-secondary-text-23 {
+  top: 136px;
+}
+.boxunchecked5 {
+  position: absolute;
+  top: 268px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child3,
+.tasks-table-child4,
+.tasks-table-child5,
+.tasks-table-child6,
+.tasks-table-child7 {
+  position: absolute;
+  width: 100%;
+  top: 113px;
+  right: 0;
+  left: 0;
+  background-color: var(--divider);
+  height: 1px;
+}
+.tasks-table-child4,
+.tasks-table-child5,
+.tasks-table-child6,
+.tasks-table-child7 {
+  top: 48px;
+}
+.tasks-table-child5,
+.tasks-table-child6,
+.tasks-table-child7 {
+  top: 178px;
+}
+.tasks-table-child6,
+.tasks-table-child7 {
+  top: 243px;
+}
+.tasks-table-child7 {
+  top: 308px;
+}
+.tasks-table-child8 {
+  top: 309px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 64px;
+}
+.boxchecked-child,
+.tasks-table-child8,
+.tasks-table-child9 {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.tasks-table-child9 {
+  top: 309px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 64px;
+  opacity: 0.05;
+}
+.boxchecked-child {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--main-accent-blue);
+}
+.vector-icon {
+  position: absolute;
+  height: 48.13%;
+  width: 61.25%;
+  top: 26.88%;
+  right: 18.75%;
+  bottom: 25%;
+  left: 20%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.boxchecked {
+  position: absolute;
+  top: 333px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child10 {
+  position: absolute;
+  width: 100%;
+  top: 374px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.boxunchecked6 {
+  position: absolute;
+  top: 398px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child11 {
+  position: absolute;
+  width: 100%;
+  top: 439px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 64px;
+}
+.boxunchecked7 {
+  position: absolute;
+  top: 463px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.mask-group,
+.mask-group-child {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.mask-group-child {
+  top: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 64px;
+}
+.mask-group {
+  top: 504px;
+  height: 88px;
+}
+.textregular-13-tablegray4 {
+  position: absolute;
+  top: 136px;
+  left: calc(50% + 317px);
+  width: 60px;
+  height: 20px;
+}
+.textregular-13-tablegray5,
+.textregular-13-tablegray6,
+.textregular-13-tablegray7 {
+  position: absolute;
+  top: 201px;
+  left: calc(50% + 317px);
+  width: 60px;
+  height: 20px;
+}
+.textregular-13-tablegray6,
+.textregular-13-tablegray7 {
+  top: 266px;
+}
+.textregular-13-tablegray7 {
+  top: 331px;
+  color: var(--secondary-table-black);
+}
+.textregular-13-tablegray8,
+.textregular-13-tablegray9 {
+  position: absolute;
+  top: 396px;
+  left: calc(50% + 317px);
+  width: 60px;
+  height: 20px;
+}
+.textregular-13-tablegray9 {
+  top: 461px;
+}
+.textregular-13-tablegray10,
+.textregular-13-tablegray11,
+.textregular-13-tablegray12 {
+  position: absolute;
+  top: 526px;
+  left: calc(50% + 317px);
+  width: 60px;
+  height: 20px;
+}
+.textregular-13-tablegray11,
+.textregular-13-tablegray12 {
+  top: 590px;
+}
+.textregular-13-tablegray12 {
+  top: 654px;
+}
+.table-secondary-text-24,
+.table-secondary-text-25 {
+  position: absolute;
+  top: 396px;
+  right: 24px;
+  width: 130px;
+  height: 20px;
+  text-align: right;
+}
+.table-secondary-text-25 {
+  top: 654px;
+}
+.boxunchecked8 {
+  position: absolute;
+  top: 528px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+}
+.tasks-table-child12,
+.tasks-table-child13 {
+  position: absolute;
+  width: 100%;
+  top: 373px;
+  right: 0;
+  left: 0;
+  background-color: var(--divider);
+  height: 1px;
+}
+.tasks-table-child13 {
+  top: 438px;
+}
+.table-secondary-text-26,
+.table-secondary-text-27 {
+  position: absolute;
+  top: 461px;
+  right: 24px;
+  width: 130px;
+  height: 20px;
+  text-align: right;
+}
+.table-secondary-text-27 {
+  top: 590px;
+}
+.tasks-table-child14 {
+  position: absolute;
+  top: 696px;
+  left: 0;
+  background-color: var(--divider);
+  width: 1110px;
+  height: 1px;
+}
+.tasks-table-child15,
+.tasks-table-child16 {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.tasks-table-child15 {
+  top: 503px;
+  background-color: var(--divider);
+  height: 1px;
+}
+.tasks-table-child16 {
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 48px;
+}
+.iconotherdelete {
+  position: absolute;
+  top: 16px;
+  right: 930px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.textmedium-13-darkblue-o50 {
+  position: absolute;
+  top: 14px;
+  left: 64px;
+  width: 84px;
+  height: 20px;
+  color: var(--secondary-dark-blue);
+}
+.b {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxcheckbox-number-selected {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  font-size: 9px;
+  color: var(--color-white);
+}
+.textmedium-15-tableblack1,
+.textmedium-15-tableblack2,
+.textmedium-15-tableblack3,
+.textmedium-15-tableblack4 {
+  position: absolute;
+  top: 134px;
+  left: 100px;
+  width: 226px;
+  height: 23px;
+  font-size: var(--medium-15-size);
+  color: var(--secondary-table-black);
+}
+.textmedium-15-tableblack2,
+.textmedium-15-tableblack3,
+.textmedium-15-tableblack4 {
+  top: 395px;
+}
+.textmedium-15-tableblack3,
+.textmedium-15-tableblack4 {
+  top: 653px;
+}
+.textmedium-15-tableblack4 {
+  top: 200px;
+}
+.textmedium-15-tableblack5,
+.textmedium-15-tableblack6,
+.textmedium-15-tableblack7,
+.textmedium-15-tableblack8,
+.textmedium-15-tableblack9 {
+  position: absolute;
+  top: 460px;
+  left: 100px;
+  width: 226px;
+  height: 23px;
+  font-size: var(--medium-15-size);
+  color: var(--secondary-table-black);
+}
+.textmedium-15-tableblack6,
+.textmedium-15-tableblack7,
+.textmedium-15-tableblack8,
+.textmedium-15-tableblack9 {
+  top: 589px;
+}
+.textmedium-15-tableblack7,
+.textmedium-15-tableblack8,
+.textmedium-15-tableblack9 {
+  top: 265px;
+}
+.textmedium-15-tableblack8,
+.textmedium-15-tableblack9 {
+  top: 525px;
+}
+.textmedium-15-tableblack9 {
+  top: 330px;
+}
+.table-secondary-text-28,
+.table-secondary-text-29 {
+  position: absolute;
+  top: 526px;
+  right: 24px;
+  width: 130px;
+  height: 20px;
+  text-align: right;
+}
+.table-secondary-text-29 {
+  top: 331px;
+  color: var(--secondary-table-black);
+}
+.textregular-13-tablegray13 {
+  position: absolute;
+  top: 135px;
+  left: calc(50% + 173px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray14,
+.textregular-13-tablegray15,
+.textregular-13-tablegray16 {
+  position: absolute;
+  top: 201px;
+  left: calc(50% + 173px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray15,
+.textregular-13-tablegray16 {
+  top: 266px;
+}
+.textregular-13-tablegray16 {
+  top: 331px;
+  color: var(--secondary-table-black);
+}
+.textregular-13-tablegray17,
+.textregular-13-tablegray18 {
+  position: absolute;
+  top: 396px;
+  left: calc(50% + 173px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray18 {
+  top: 461px;
+}
+.textregular-13-tablegray19,
+.textregular-13-tablegray20,
+.textregular-13-tablegray21 {
+  position: absolute;
+  top: 526px;
+  left: calc(50% + 173px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray20,
+.textregular-13-tablegray21 {
+  top: 590px;
+}
+.textregular-13-tablegray21 {
+  top: 654px;
+}
+.associated-photo-icon {
+  position: absolute;
+  top: 69px;
+  left: 64px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.associated-photo-icon1,
+.associated-photo-icon2,
+.associated-photo-icon3 {
+  position: absolute;
+  top: 394px;
+  left: 64px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.associated-photo-icon2,
+.associated-photo-icon3 {
+  top: 459px;
+}
+.associated-photo-icon3 {
+  top: 134px;
+}
+.associated-photo-icon4,
+.associated-photo-icon5,
+.associated-photo-icon6 {
+  position: absolute;
+  top: 329px;
+  left: 64px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.associated-photo-icon5,
+.associated-photo-icon6 {
+  top: 524px;
+}
+.associated-photo-icon6 {
+  top: 652px;
+}
+.associated-photo-icon7,
+.associated-photo-icon8,
+.associated-photo-icon9 {
+  position: absolute;
+  top: 264px;
+  left: 64px;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.associated-photo-icon8,
+.associated-photo-icon9 {
+  top: 199px;
+}
+.associated-photo-icon9 {
+  top: 588px;
+}
+.textregular-13-tablegray22 {
+  position: absolute;
+  top: 136px;
+  left: calc(50% - 205px);
+  width: 210px;
+  height: 20px;
+}
+.textregular-13-tablegray23,
+.textregular-13-tablegray24,
+.textregular-13-tablegray25 {
+  position: absolute;
+  top: 201px;
+  left: calc(50% - 205px);
+  width: 210px;
+  height: 20px;
+}
+.textregular-13-tablegray24,
+.textregular-13-tablegray25 {
+  top: 266px;
+}
+.textregular-13-tablegray25 {
+  top: 331px;
+  color: var(--secondary-table-black);
+}
+.textregular-13-tablegray26,
+.textregular-13-tablegray27,
+.textregular-13-tablegray28 {
+  position: absolute;
+  top: 396px;
+  left: calc(50% - 205px);
+  width: 210px;
+  height: 20px;
+}
+.textregular-13-tablegray27,
+.textregular-13-tablegray28 {
+  top: 461px;
+}
+.textregular-13-tablegray28 {
+  top: 526px;
+}
+.textregular-13-tablegray29,
+.textregular-13-tablegray30,
+.textregular-13-tablegray31 {
+  position: absolute;
+  top: 590px;
+  left: calc(50% - 205px);
+  width: 210px;
+  height: 20px;
+}
+.textregular-13-tablegray30,
+.textregular-13-tablegray31 {
+  top: 654px;
+}
+.textregular-13-tablegray31 {
+  top: 136px;
+  left: calc(50% + 29px);
+  width: 120px;
+}
+.textregular-13-tablegray32,
+.textregular-13-tablegray33,
+.textregular-13-tablegray34 {
+  position: absolute;
+  top: 201px;
+  left: calc(50% + 29px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray33,
+.textregular-13-tablegray34 {
+  top: 266px;
+}
+.textregular-13-tablegray34 {
+  top: 331px;
+  color: var(--secondary-table-black);
+}
+.textregular-13-tablegray35,
+.textregular-13-tablegray36 {
+  position: absolute;
+  top: 396px;
+  left: calc(50% + 29px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray36 {
+  top: 461px;
+}
+.textregular-13-tablegray37,
+.textregular-13-tablegray38,
+.textregular-13-tablegray39 {
+  position: absolute;
+  top: 526px;
+  left: calc(50% + 29px);
+  width: 120px;
+  height: 20px;
+}
+.textregular-13-tablegray38,
+.textregular-13-tablegray39 {
+  top: 590px;
+}
+.textregular-13-tablegray39 {
+  top: 654px;
+}
+.vector-icon1 {
+  position: absolute;
+  top: 3.5px;
+  left: 5.9px;
+  width: 14.2px;
+  height: 18.3px;
+}
+.image-icon {
+  object-fit: cover;
+}
+.hand,
+.hand1,
+.image-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+}
+.hand {
+  top: 530px;
+  left: 255px;
+}
+.tasks-table {
+  position: absolute;
+  width: calc(100% - 330px);
+  top: 162px;
+  right: 38px;
+  left: 292px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  height: 697px;
+}
+.top-devider {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background-color: var(--divider);
+  height: 1px;
+}
+.contacts {
+  position: relative;
+  background-color: #f5f6f8;
+  width: 100%;
+  height: 850px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--regular-13-size);
+  color: var(--secondary-table-gray);
+  font-family: var(--regular-13);
+}
+
+</style>
+<body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+    
+        <link rel="stylesheet" href="./global.css" />
+        <link rel="stylesheet" href="./index.css" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600&display=swap"
+        />
+      </head>
+      <body>
+        <div class="contacts">
+          <div class="searchsearch-bar">
+            <div class="top-bar-bg"></div>
+            <img
+              class="iconothernotifications"
+              alt=""
+              src="./public/iconothernotifications.svg"
+            />
+    
+            <div class="search">
+              <div class="search-for-a">Search for a contact</div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconothersearch.svg"
+              />
+            </div>
+          </div>
+          <div class="side-barcontacts">
+            <div class="side-nav-bg"></div>
+            <div class="toggle-sidebar">
+              <div class="textmedium-11-gray">
+                <div class="sfergusongmailcom">Toggle sidebar</div>
+              </div>
+              <div class="iconmenutoggle">
+                <div class="subtract">
+                  <div class="rectangle"></div>
+                  <div class="subtract-child"></div>
+                </div>
+              </div>
+            </div>
+            <div class="settings">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Settings</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenusettings.svg"
+              />
+            </div>
+            <div class="deals">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Deals</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenudeals.svg"
+              />
+            </div>
+            <div class="chat">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Chat</div>
+              </div>
+              <img class="iconothersearch" alt="" src="./public/iconmenuchat.svg" />
+            </div>
+            <div class="contacts1">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Contacts</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenucontactsactive.svg"
+              />
+            </div>
+            <div class="email">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Email</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenuemail.svg"
+              />
+            </div>
+            <div class="tasks">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Tasks</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenutasks.svg"
+              />
+            </div>
+            <div class="dashboard">
+              <div class="textmedium-13-darkblue">
+                <div class="sfergusongmailcom">Dashboard</div>
+              </div>
+              <img
+                class="iconothersearch"
+                alt=""
+                src="./public/iconmenudashboard.svg"
+              />
+            </div>
+            <h3 class="saas-kit">SaaS Kit</h3>
+            <div class="profile">
+              <img
+                class="avatarprofile-photo-icon"
+                alt=""
+                src="./public/avatarprofile-photo@2x.png"
+              />
+    
+              <div class="textmedium-14-black">
+                <div class="sierra-ferguson">Sierra Ferguson</div>
+              </div>
+              <div class="textmedium-11-gray1">
+                <div class="sfergusongmailcom">s.ferguson@gmail.com</div>
+              </div>
+            </div>
+            <div class="side-nav-devider"></div>
+          </div>
+          <div class="accent-btn">
+            <div class="accent-btn-child"></div>
+            <div class="add-contact">Add contact</div>
+          </div>
+          <div class="filter">
+            <div class="email-type">
+              <div class="company-all">
+                <span>Company: </span>
+                <span class="all">All</span>
+              </div>
+              <img class="polygon-icon" alt="" src="./public/polygon.svg" />
+            </div>
+          </div>
+          <div class="tasks-table">
+            <div class="tasks-table-child"></div>
+            <div class="boxunchecked">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-item"></div>
+            <div class="boxunchecked1">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-inner"></div>
+            <img class="rectangle-icon" alt="" src="./public/rectangle-4.svg" />
+    
+            <div class="boxunchecked2">
+              <div class="unchecked"></div>
+            </div>
+            <div class="textmedium-15-tableblack">
+              <div class="sfergusongmailcom">Lindsey Stroud</div>
+            </div>
+            <div class="textregular-13-tablegray">
+              <div class="hatchbuck">Hatchbuck</div>
+            </div>
+            <div class="textregular-13-tablegray1">
+              <div class="hatchbuck">Manager</div>
+            </div>
+            <div class="textregular-13-tablegray2">
+              <div class="hatchbuck">50 %</div>
+            </div>
+            <div class="textregular-13-tablegray3">
+              <div class="hatchbuck">lindsey.stroud@gmail.com</div>
+            </div>
+            <div class="rectangle-div"></div>
+            <div class="boxunchecked3">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-child1"></div>
+            <div class="boxunchecked4">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-child2"></div>
+            <div class="table-secondary-text-2">
+              <div class="hatchbuck">6 Hours ago</div>
+            </div>
+            <div class="table-secondary-text-21">
+              <div class="hatchbuck">Dec 14, 2018</div>
+            </div>
+            <div class="table-secondary-text-22">
+              <div class="hatchbuck">5 Minutes ago</div>
+            </div>
+            <div class="table-secondary-text-23">
+              <div class="hatchbuck">14 Minutes ago</div>
+            </div>
+            <div class="boxunchecked5">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-child3"></div>
+            <div class="tasks-table-child4"></div>
+            <div class="tasks-table-child5"></div>
+            <div class="tasks-table-child6"></div>
+            <div class="tasks-table-child7"></div>
+            <img class="tasks-table-child8" alt="" src="./public/rectangle-4.svg" />
+    
+            <img
+              class="tasks-table-child9"
+              alt=""
+              src="./public/rectangle-44.svg"
+            />
+    
+            <div class="boxchecked">
+              <div class="boxchecked-child"></div>
+              <img class="vector-icon" alt="" src="./public/vector.svg" />
+            </div>
+            <div class="tasks-table-child10"></div>
+            <div class="boxunchecked6">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-child11"></div>
+            <div class="boxunchecked7">
+              <div class="unchecked"></div>
+            </div>
+            <div class="mask-group">
+              <div class="mask-group-child"></div>
+            </div>
+            <div class="textregular-13-tablegray4">
+              <div class="hatchbuck">75 %</div>
+            </div>
+            <div class="textregular-13-tablegray5">
+              <div class="hatchbuck">10 %</div>
+            </div>
+            <div class="textregular-13-tablegray6">
+              <div class="hatchbuck">25 %</div>
+            </div>
+            <div class="textregular-13-tablegray7">
+              <div class="hatchbuck">30 %</div>
+            </div>
+            <div class="textregular-13-tablegray8">
+              <div class="hatchbuck">40 %</div>
+            </div>
+            <div class="textregular-13-tablegray9">
+              <div class="hatchbuck">60 %</div>
+            </div>
+            <div class="textregular-13-tablegray10">
+              <div class="hatchbuck">100 %</div>
+            </div>
+            <div class="textregular-13-tablegray11">
+              <div class="hatchbuck">75 %</div>
+            </div>
+            <div class="textregular-13-tablegray12">
+              <div class="hatchbuck">45 %</div>
+            </div>
+            <div class="table-secondary-text-24">
+              <div class="hatchbuck">Dec 11, 2018</div>
+            </div>
+            <div class="table-secondary-text-25">
+              <div class="hatchbuck">Nov 26, 2018</div>
+            </div>
+            <div class="boxunchecked8">
+              <div class="unchecked"></div>
+            </div>
+            <div class="tasks-table-child12"></div>
+            <div class="tasks-table-child13"></div>
+            <div class="table-secondary-text-26">
+              <div class="hatchbuck">Dec 9, 2018</div>
+            </div>
+            <div class="table-secondary-text-27">
+              <div class="hatchbuck">Nov 30, 2018</div>
+            </div>
+            <div class="tasks-table-child14"></div>
+            <div class="tasks-table-child15"></div>
+            <img
+              class="tasks-table-child16"
+              alt=""
+              src="./public/rectangle-41.svg"
+            />
+    
+            <img
+              class="iconotherdelete"
+              alt=""
+              src="./public/iconotherdelete.svg"
+            />
+    
+            <div class="textmedium-13-darkblue-o50">
+              <div class="sfergusongmailcom">1 selected</div>
+            </div>
+            <div class="boxcheckbox-number-selected">
+              <div class="boxchecked-child"></div>
+              <b class="b">1</b>
+            </div>
+            <div class="textmedium-15-tableblack1">
+              <div class="sfergusongmailcom">Nicci Troiani</div>
+            </div>
+            <div class="textmedium-15-tableblack2">
+              <div class="sfergusongmailcom">Jones Dermot</div>
+            </div>
+            <div class="textmedium-15-tableblack3">
+              <div class="sfergusongmailcom">Judith Williams</div>
+            </div>
+            <div class="textmedium-15-tableblack4">
+              <div class="sfergusongmailcom">George Fields</div>
+            </div>
+            <div class="textmedium-15-tableblack5">
+              <div class="sfergusongmailcom">Martin Merces</div>
+            </div>
+            <div class="textmedium-15-tableblack6">
+              <div class="sfergusongmailcom">John Smith</div>
+            </div>
+            <div class="textmedium-15-tableblack7">
+              <div class="sfergusongmailcom">Rebecca Moore</div>
+            </div>
+            <div class="textmedium-15-tableblack8">
+              <div class="sfergusongmailcom">Franz Ferdinand</div>
+            </div>
+            <div class="textmedium-15-tableblack9">
+              <div class="sfergusongmailcom">Jane Doe</div>
+            </div>
+            <div class="table-secondary-text-28">
+              <div class="hatchbuck">Dec 6, 2018</div>
+            </div>
+            <div class="table-secondary-text-29">
+              <div class="hatchbuck">Dec 12, 2018</div>
+            </div>
+            <div class="textregular-13-tablegray13">
+              <div class="hatchbuck">Manager</div>
+            </div>
+            <div class="textregular-13-tablegray14">
+              <div class="hatchbuck">CEO</div>
+            </div>
+            <div class="textregular-13-tablegray15">
+              <div class="hatchbuck">Manager</div>
+            </div>
+            <div class="textregular-13-tablegray16">
+              <div class="hatchbuck">Engineer</div>
+            </div>
+            <div class="textregular-13-tablegray17">
+              <div class="hatchbuck">Developer</div>
+            </div>
+            <div class="textregular-13-tablegray18">
+              <div class="hatchbuck">Manager</div>
+            </div>
+            <div class="textregular-13-tablegray19">
+              <div class="hatchbuck">Manager</div>
+            </div>
+            <div class="textregular-13-tablegray20">
+              <div class="hatchbuck">CEO</div>
+            </div>
+            <div class="textregular-13-tablegray21">
+              <div class="hatchbuck">Designer</div>
+            </div>
+            <img
+              class="associated-photo-icon"
+              alt=""
+              src="./public/associated-photo@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon1"
+              alt=""
+              src="./public/associated-photo1@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon2"
+              alt=""
+              src="./public/associated-photo2@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon3"
+              alt=""
+              src="./public/associated-photo3@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon4"
+              alt=""
+              src="./public/associated-photo4@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon5"
+              alt=""
+              src="./public/associated-photo5@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon6"
+              alt=""
+              src="./public/associated-photo6@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon7"
+              alt=""
+              src="./public/associated-photo7@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon8"
+              alt=""
+              src="./public/associated-photo8@2x.png"
+            />
+    
+            <img
+              class="associated-photo-icon9"
+              alt=""
+              src="./public/associated-photo9@2x.png"
+            />
+    
+            <div class="textregular-13-tablegray22">
+              <div class="hatchbuck">nicci.troiani@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray23">
+              <div class="hatchbuck">george.fields@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray24">
+              <div class="hatchbuck">rebecca.moore@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray25">
+              <div class="hatchbuck">jane.doe@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray26">
+              <div class="hatchbuck">dermot.jones@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray27">
+              <div class="hatchbuck">martin.merces@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray28">
+              <div class="hatchbuck">franz.ferdiand@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray29">
+              <div class="hatchbuck">john.smith@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray30">
+              <div class="hatchbuck">judith.williams@gmail.com</div>
+            </div>
+            <div class="textregular-13-tablegray31">
+              <div class="hatchbuck">Slack</div>
+            </div>
+            <div class="textregular-13-tablegray32">
+              <div class="hatchbuck">Clockify</div>
+            </div>
+            <div class="textregular-13-tablegray33">
+              <div class="hatchbuck">Upwork</div>
+            </div>
+            <div class="textregular-13-tablegray34">
+              <div class="hatchbuck">Trello</div>
+            </div>
+            <div class="textregular-13-tablegray35">
+              <div class="hatchbuck">Slack</div>
+            </div>
+            <div class="textregular-13-tablegray36">
+              <div class="hatchbuck">Google</div>
+            </div>
+            <div class="textregular-13-tablegray37">
+              <div class="hatchbuck">Facebook</div>
+            </div>
+            <div class="textregular-13-tablegray38">
+              <div class="hatchbuck">Skype</div>
+            </div>
+            <div class="textregular-13-tablegray39">
+              <div class="hatchbuck">Google</div>
+            </div>
+            <div class="hand">
+              <div class="hand1">
+                <img class="vector-icon1" alt="" src="./public/vector1.svg" />
+    
+                <img class="image-icon" alt="" src="./public/image@2x.png" />
+              </div>
+            </div>
+          </div>
+          <div class="top-devider"></div>
+        </div>
+      </body>
+    </html>  
+</body>
+</html>

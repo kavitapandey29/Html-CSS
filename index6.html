@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:"poppins", sans-serif;
+      
+    }
+    
+    .fcontainer{
+      min-height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+   .content{
+    display: flex;
+    justify-content: center;
+    align:center;
+    flex-wrap: wrap;
+    margin: 30px;}
+    
+    .card{
+      position: relative
+      ;
+      background: #fff;
+      max-width: 325px;
+      width: 325px;
+      height: auto;
+      margin: 25px;
+      box-shadow:0 5px 25px rgb(1 1 1 /20%);
+      border-radius:10px;
+      overflow: hidden;
+
+    }
+    .card-img{
+      max-height: 200px;
+    }
+    .card-img img{
+      max-height: 100%;
+      width: 100%;
+    }
+    .info{
+      position: relative;
+      color: #222;
+      padding: 10px 20px 20px;
+
+    }
+    .info h3{
+      font-size: 1.4em;
+      font-weight: 800;
+      margin-bottom: 5px;
+
+    }
+    .info p{
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
+    
+  .pro{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(107, 217, 241);
+    box-shadow:0 5px 25px rgb(1 1 1 /20%);
+  }
+  .round{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(181, 180, 180);
+    box-shadow:0 5px 25px rgb(1 1 1 /20%);
+
+  }
+  .diff-round{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(107, 217, 241);
+    box-shadow:0 5px 25px rgb(1 1 1 /20%);
+
+  }
+  </style>
+</head>
+<body>
+  <section>
+    <h1 style="font-size: 50px; padding-left: 450px;">working Pagination</h1>
+    <h2 style="padding-left: 700px;">With Examples Ul Cards</h2>
+    <div class="fcontainer">
+    <div class="content">
+      <div class="card">
+        <div class="card-img"><img src="picture1.jpg"></div>
+        <div class="info"></div>
+        <h3>card 01</h3>
+        <p>Life is full of both joys and disasters. The ups and downs of life are what tpxhey're called. 
+          Without them, life is just a never-ending war that can be won at any time.</p>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="picture4.jpg"> </div>
+        <div class="info"></div>
+        <h3>card 02</h3>
+        <p>Life is full of both joys and disasters. The ups and downs of life are what they're called. 
+          Without them, life is just a never-ending war that can be won at any time.</p>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="picture3.jpg"></div>
+        <div class="info"></div>
+        <h3>card 03</h3>
+        <p>Life is full of both joys and disasters. The ups and downs of life are what they're called. 
+          Without them, life is just a never-ending war that can be won at any time.</p>
+      </div>
+    </div>
+    <div  >
+      <button class="pro">prev</button>
+      <button class="round">1</button>
+      <button class="round">_</button>
+      <button class="round">5</button>
+      <button class="diff-round">6</button>
+      <button class="round">7</button>
+      <button class="round">_</button>
+      <button class="round">10</button>
+      <button class="pro">Next</button>
+
+    </div>
+</div>
+  </section>
+</body>
+</html>

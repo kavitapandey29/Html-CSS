@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+    }
+    .body{
+        align-items:center;
+        justify-content: center;
+        height: 100vh; 
+    }
+    .circle1{
+        position: absolute;
+        height: 700px;
+        width: 700px;
+        margin-left: 25%;
+        flex-wrap: wrap;
+        border: 5px solid transparent;
+        border-top:10px solid pink ;
+        border-bottom:10px solid paleturquoise ;
+        border-radius: 50%;
+        animation-name:animation;
+        /*for speed*/
+        animation-duration :1s ;
+        animation-timing-function:infinite;
+        animation-iteration-count:infinite;
+    }
+    .circle2{
+        align-items: center;
+        height: 500px;
+        width: 500px;
+        border: 5px solid transparent;
+        border-top:10px solid plum ;
+        border-bottom:10px solid plum ;
+        border-radius: 50%;
+        position: relative;
+        left: 32%;
+        top: 90px;
+        animation-name:ani;
+        /*for speed*/
+        animation-duration :1s ;
+        animation-timing-function:infinite;
+        animation-iteration-count:infinite;
+
+    }
+    @keyframes animation{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes ani{
+        from{
+            transform: rotate(360deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }   
+    }
+
+</style>
+<body>
+    <div class="container">
+ <div class="circle1"></div>  
+ <div class="circle2"></div>
+    </div>
+</body>
+</html>

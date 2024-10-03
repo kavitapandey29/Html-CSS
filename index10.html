@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+    background: aquamarine;
+}
+.columns{
+    width: 1170px;
+    margin: auto;
+    border: 1px solid black;
+}
+.column{
+    width: 23%;
+    margin: 1%;
+    float: left;
+    text-align: center;
+    background: #ccc;
+
+}
+.column img{
+    width: 100%;
+   
+}
+.clear{
+    clear: both;
+}
+@media(max-width:768px) {
+    .columns{
+        width: 100%;
+        border: none;
+
+    } 
+    .column{
+    width: 48%;
+    margin: 1%;
+    }
+}
+@media(max-width:441px) {
+    .columns{
+        width: 100%;
+        border: none;
+
+    } 
+    .column{
+    width: 48%;
+    margin: 1%;
+    }
+}
+@media(max-width:425px) {
+    .columns{
+        width: 100%;
+        border: none;
+
+    } 
+    .column{
+    width: 96%;
+    margin: 2%;
+    }
+}
+    
+</style>
+</head>
+<body>
+   <div class="wrapper">
+    <section class="columns">
+        <div class="column"><img src="building1.jpg" alt=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi, aliquam ad atque quisquam molestiae vel ut sit natus amet maxime nesciunt alias doloribus aspernatur reiciendis soluta unde cum. Debitis?</p></div>
+        <div class="column"><img src="building1.jpg" alt=""><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia maiores, esse eum, voluptatibus cupiditate suscipit sunt dolorum ex at atque, laboriosam asperiores perferendis? Quam ipsum commodi eaque ea, repudiandae amet!</p></div>
+        <div class="column"><img src="building4.jpg" alt=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum recusandae in dolore nostrum consequuntur? A suscipit reiciendis, eaque est dolor iure, culpa labore pariatur voluptatibus quis similique quos? Aliquam, nesciunt!</p></div>
+        <div class="column"><img src="building4.jpg" alt=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum atque, maiores hic minima voluptatem quos maxime dolorem quam assumenda culpa. Aliquid natus assumenda nam facilis, ipsam dolorem dicta rerum reprehenderit.</p></div>
+        <div class="clear"></div>
+    </section>
+    </div>
+</body>
+</html>

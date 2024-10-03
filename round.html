@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    .section{
+        display: flex;
+    }
+    .container{
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        margin-left: 32%;
+        display: flex;
+        flex-wrap: wrap;
+        border: 5px solid transparent;
+        border-top:10px solid pink ;
+        border-bottom:10px solid paleturquoise ;
+        border-radius: 50%;
+
+        /*animation here*/
+        animation-name:rotation;
+        /*for speed*/
+        animation-duration :1s ;
+        animation-timing-function:infinite;
+        animation-iteration-count:infinite;
+    }
+    @keyframes rotation{
+        /*parcentage*/
+        /*from-to*/
+        from{
+            transform: rotate(360deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }
+    }
+    .container2{
+        position: relative;
+        top: 90px;
+        left: 38%;
+        align:center;
+        height: 400px;
+        width: 400px;
+        border: 5px solid transparent;
+        border-top:10px solid pink ;
+        border-bottom:10px solid paleturquoise ;
+        border-radius: 50%;
+
+        /*animation here*/
+        animation-name:rounded;
+        /*for speed*/
+        animation-duration :1s ;
+        animation-timing-function:infinite;
+        animation-iteration-count:infinite;
+    }
+    @keyframes rounded{
+        /*parcentage*/
+        /*from-to*/
+       /*parcentage*/
+       0%{
+        transform:rotate(0deg) ;
+       }
+       10%{
+        transform:rotate(10deg);
+        
+       }
+       15%{
+        transform:rotate(30deg);
+        
+       }
+       25%{
+        transform:rotate(60deg);
+        
+       }
+       30%{
+        transform:rotate(90deg);
+       }
+       40%{
+        transform:rotate(120deg);
+       }
+       45%{
+        transform:rotate(150deg);
+       }
+      50%{
+        transform:rotate(180deg);
+       }
+       60%{
+        transform:rotate(210deg);
+       }
+       70%{
+        transform:rotate(24deg);
+       }
+       80%{
+        transform:rotate(270deg);
+       }
+       90%{
+        transform:rotate(300deg);
+       }
+       95%{
+        transform:rotate(330deg);
+       }
+       100%{
+        transform:rotate(360deg);
+       }
+    }
+
+</style>
+<body>
+    <section>
+ <div class="container"></div>  
+ <div class="container2"></div>
+</section>
+</body>
+</html>

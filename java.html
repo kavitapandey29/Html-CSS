@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var month=4;
+var year=2023;     
+if (month == 1 || month == 3 || month== 5 || month== 7 || month== 8 || month == 10 || month == 12) {
+    console.log("have 31 days");
+}
+else if (month == 2 && year%4===0) {
+    console.log("have 29 days");
+    console.log("leap year");
+}
+else if(month==2)
+{
+    console.log("have 28 days");
+    console.log("non-leap year");
+}
+else if (month == 4 || month == 6 || month == 9 || month == 11) {
+    console.log("have 30 days");
+}
+else{
+    console.log("enter valid month ");
+}
+
+var age =70;
+if(age>60){
+    console.log("retirement age");
+}
+else if(age<18){
+    console.log("minor not applicable")
+}
+else if(age>60){
+    console.log("retired")
+}
+else{console.log("applicable")}
+
+var age = 100;
+var retirement=60
+
+if(age > 18 && age<retirement && age<100){
+    // console.log(retirement-age,"year of retirement")
+} else if (age >retirement){
+    console.log(age-retirement,"year of retirement")
+}else if(age==18){
+    console.log("not eligible for job")
+}else if (age<18){
+    console.log("not eligible for work")
+}else if(age>100){
+    console.log("not able to do work")
+}else{
+    console.log("error")
+}
+
+// var marks=90;
+// var optmarks=100;
+
+// var parcentage=marks / optmarks * 100;
+// if(marks <= 90 && marks <= optmarks){
+//     console.log(`A grade ${percentage}`);
+// }
+// else if(optmarks < marks){
+//     console.log("error")
+// }
+//  else if(marks <= 80 && marks < 90){
+//     console.log(`B grade ${percentage}`);
+// }
+
+let number=5;
+number % 2 ==0 ? console.log("the number is even"): console.log("the number is odd");
+
+{let arry = [1,2,4,50,7,83,671];
+let square=arry.map(num=>{
+    return num * num;
+})
+console . log (square)}
+var str 
+let arry=[
+        {
+            name:"ashish",
+            age:28,
+            salary:20000,
+        },
+        {
+            name:"ashish",
+            age:28,
+            salary:15000,
+        },
+        {
+            name:"ashish",
+            age:28,
+            salary:30000,
+        },
+        {
+            name:"ashish",
+            age:28,
+            salary:40000,
+        },
+
+       ]
+     let newarry =arry.map 
+
+    var arry=10
+for (var i=10; i >= arry; i--){
+    console.log(i);
+}
+
+for (i=5; i>=1; i--){
+            var temp ="";
+
+            for (j = 1; j <=i; j++){
+                temp += "*"
+            }
+            console.log(temp);
+            
+        }
+    </script>
+
+</body>
+</html>
